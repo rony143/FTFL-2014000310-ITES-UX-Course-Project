@@ -6,12 +6,10 @@
 img, object, embed, video {
 	max-width: 100%;
 }
-
 /* IE 6 does not support max-width so default to width 100% */
 .ie6 img {
-	width:100%;
+	width: 100%;
 }
-
 /*
 	Dreamweaver Fluid Grid Properties
 	----------------------------------
@@ -34,14 +32,12 @@ img, object, embed, video {
 	float: left;
 	display: block;
 }
-
 .fluidList {
-    list-style:none;
-    list-style-image:none;
-    margin:0;
-    padding:0;        
+	list-style: none;
+	list-style-image: none;
+	margin: 0;
+	padding: 0;
 }
-
 /* Mobile Layout: 480px and below. */
   
 .gridContainer {
@@ -56,16 +52,15 @@ img, object, embed, video {
 #div1 {
 }
 .zeroMargin_mobile {
-    margin-left: 0;
+	margin-left: 0;
 }
 .hide_mobile {
-    display: none;
+	display: none;
 }
 
 /* Tablet Layout: 481px to 768px. Inherits styles from: Mobile Layout. */
 
 @media only screen and (min-width: 481px) {
-
 .gridContainer {
 	width: 90.675%;
 	padding-left: 1.1625%;
@@ -77,17 +72,16 @@ img, object, embed, video {
 #div1 {
 }
 .zeroMargin_tablet {
-    margin-left: 0;
+	margin-left: 0;
 }
 .hide_tablet {
-    display: none;
+	display: none;
 }
 }
 
 /* Desktop Layout: 769px to a max of 1232px.  Inherits styles from: Mobile Layout and Tablet Layout. */
 
 @media only screen and (min-width: 769px) {
-
 .gridContainer {
 	width: 88.5%;
 	max-width: 1232px;
@@ -101,13 +95,80 @@ img, object, embed, video {
 #div1 {
 }
 .zeroMargin_desktop {
-    margin-left: 0;
+	margin-left: 0;
 }
 .hide_desktop {
-    display: none;
+	display: none;
 }
 }
-
-.heading_text{
+.heading_text {
 	margin-top: 7px;
+	margin-right: 0px;
+	padding: 0px
+}
+.heading_text a {
+	font-size: 12px;
+	text-decoration: none;
+}
+.heading_text ul li {
+	float: right;
+	margin-top: -20px;
+	list-style: none;
+}
+.icon-cart {
+	width: 38px;
+	height: 38px;
+	line-height: 38px;
+	text-align: center;
+	position: relative;
+	background-color: #7bbd42;
+	margin-left: 10px;
+}
+.cart-inner {
+	position: relative;
+	display: block;
+	margin-left: 47px;
+	margin-top: -50px;
+}
+.heading {
+	float: right;
+}
+.cart-inner a {
+	text-decoration: none;
+}
+.icon-cart {
+	margin-left: 5px;
+}
+.widget-inner ul li {
+	list-style: none;
+	display: block;
+	clear: both;
+	margin-top: 5px;
+	margin-bottom: 5px
+}
+.widget-inner ul li a {
+	text-decoration: none;
+	font-size: 12px
+}
+.widget-html {
+	width: 200px;
+	margin-left: -30px;
+}
+.mega-col-inner ul li {
+	list-style: none;
+	display: block;
+	clear: both;
+	margin-top: 10px;
+	margin-bottom: 10px
+}
+.float_list {
+}
+.widget-html_cam {
+}
+.table_properties {
+	color: #666;
+	font-size: 14px;
+}
+.table_row {
+	padding: 50px 5px;
 }

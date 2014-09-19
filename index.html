@@ -8,12 +8,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Untitled Document</title>
+<title>SuperStore</title>
 <link href="boilerplate.css" rel="stylesheet" type="text/css">
 <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
-<link href="css/bootstrap-theme.css" rel="stylesheet" type="text/css">
-<link href="css/bootstrap-theme.min.css" rel="stylesheet" type="text/css">
-<link href="css/font-awesome.css" rel="stylesheet" type="text/css">
 <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
 <link href="css/style.css" rel="stylesheet" type="text/css">
 <!-- 
@@ -29,37 +26,315 @@ Do the following if you're using your customized build of modernizr (http://www.
 <!--[if lt IE 9]>
 <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
-<script src="respond.min.js"></script>
-<script src="bootstrap.js"></script>
-<script src="bootstrap.min.js"></script>
 </head>
 <body>
 <div class="gridContainer clearfix">
-<header>
-<div class="heading_text">
-
-<p>Welcome visitor you can <a href="#">login</a> or <a href="#">create an account</a>
-
-<li class="right_heading" style="float:right; margin-top:-30px; list-style:none;">
-
-<a href="#"><i class="fa fa-list-alt"></i>
-Wish List (0)</a>
-<a href="#"><i class="fa fa-user"></i>My Account</a>
-<a href="#"><i class="fa fa-share"></i>Shopping Cart</a><a href="#"><i class="fa fa-bookmark"></i>Checkout</a>
-<a href="#" style="padding:5px 14px; border:1px solid #ddd;"><i class="fa fa-gear"></i>Settings</a>
-</li>
-</p>
-<hr style="border-bottom:1px solid #ddd;">
-</div>
-<div class="container">
-<div class="row">
-<div class="col-md-3" style="float:left; padding:0px; margin-left:0px"><img src="img/Logo.png"></div>
-<div class="col-md-6">col6</div>
-<div class="col-md-3">col3</div>
-</div>
-</div>
-</header>
+<!--Header area-->
+  <header>
+    <div class="container">
+      <div class="row">
+        <div class="heading_text"> <span style="font-size:11px;">Welcome visitor you can <a href="#">login</a> or <a href="#">create an account</a></span>
+          <ul class="float_list">
+            <li> <a href="#"><i class="fa fa-list-alt"></i> Wish List (0)</a> <a href="#"><i class="fa fa-user"></i> My Account</a> <a href="#"><i class="fa fa-share"></i> Shopping Cart</a> <a href="#"><i class="fa fa-bookmark"></i> Checkout</a> <a href="#" style="padding:5px 14px; border:1px solid #ddd;"><i class="fa fa-gear"></i> Settings</a> </li>
+          </ul>
+        </div>
+        <hr style="border-bottom:1px solid #ddd;">
+      </div>
+      <div class="row">
+        <div class="col-md-3" style="float:left; padding:0px; margin-right:0px;"><img src="img/Logo.png" alt="" title=""></div>
+        <div class="col-md-6"  style="padding:0px;">
+          <div class="input-group">
+            <div class="input-group-btn"> 
+              <!-- Button and dropdown menu -->
+              <div class="btn-group">
+                <button id="btnGroupDrop1" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"> Dropdown <span class="caret"></span> </button>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="btnGroupDrop1">
+                  <li><a href="#">Dropdown link</a></li>
+                  <li><a href="#">Dropdown link</a></li>
+                </ul>
+              </div>
+            </div>
+            <input type="search" class="form-control"  placeholder="Search..">
+            <span class="input-group-addon"><a href="#"><i class="fa fa-search"></i></a></span> </div>
+        </div>
+        <div class="col-md-3" style="float:right; padding:0px; margin-left:0px;">
+          <div class="heading media">
+            <div class="pull-left"> <i class="icon-cart fa fa-shopping-cart"></i>
+              <div class="cart-inner media-body">
+                <h5>SHOPPING CART</h5>
+                <a href="#"><span id="cart-total">0 item(s) - $0.00</span><i class="fa fa-angle-down"></i></a> </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!--nav bar-->
+  <div id="pav-mainnav">
+    <div class="container" style="padding:10px 0px">
+      <div class="pav-megamenu">
+        <div class="navbar navbar-default">
+          <div id="mainmenutop" class="megamenu" role="navigation">
+            <div class="navbar-header"> <a class="navbar-toggle hidden-lg hidden-md" href="javascript:;" data-target=".navbar-collapse" data-toggle="collapse"> <span class="fa fa-bars"></span> </a>
+              <div class="collapse navbar-collapse navbar-ex1-collapse hidden-sm hidden-xs">
+                <ul class="nav navbar-nav megamenu">
+                  <li class="home first"> <a href="?route=common/home"><span class="menu-title">Home</span></a></li>
+                  <li class="full-width parent dropdown "> <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="menu-title">Desktops</span><b class="caret"></b></a>
+                    <div class="dropdown-menu" style="width:971px">
+                      <div class="dropdown-menu-inner">
+                        <div class="row">
+                          <div class="mega-col col-xs-12 col-sm-12 col-md-2 ">
+                            <div class="mega-col-inner">
+                              <div class="pavo-widget" id="pavowid-9">
+                                <h4 class="menu-title"><span class="menu-title">Category</span></h4>
+                                <div class="widget-html">
+                                  <div class="widget-inner">
+                                    <ul>
+                                      <li class="first"> <a href="#">Apple Cinema 30"</a> </li>
+                                      <li> <a href="#">Canon EOS 40D</a> </li>
+                                      <li> <a href="#">Canon EOS 40D</a> </li>
+                                      <li> <a href="#">Canon EOS 40D</a> </li>
+                                      <li> <a href="#">Canon EOS 40D</a> </li>
+                                      <li> <a href="#">Canon EOS 40D</a> </li>
+                                      <li> <a href="#">Canon EOS 40D</a> </li>
+                                      <li class="last"> <a href="#">Canon EOS 40D</a> </li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="mega-col col-xs-12 col-sm-12 col-md-2 ">
+                            <div class="mega-col-inner">
+                              <div class="pavo-widget" id="pavowid-7">
+                                <h4 class="menu-title"><span class="menu-title">Account</span></h4>
+                                <div class="widget-html">
+                                  <div class="widget-inner">
+                                    <ul>
+                                      <li class="first"> <a href="#">Login</a> </li>
+                                      <li> <a href="#">Create account</a> </li>
+                                      <li> <a href="#">Wish List</a> </li>
+                                      <li> <a href="#">My Account</a> </li>
+                                      <li> <a href="#">Shopping Cart</a> </li>
+                                      <li> <a href="#">Checkout</a> </li>
+                                      <li> <a href="#r">Order History</a> </li>
+                                      <li class="last"> <a href="#">Transaction</a> </li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="mega-col col-xs-12 col-sm-12 col-md-2 ">
+                            <div class="mega-col-inner">
+                              <div class="pavo-widget" id="pavowid-8">
+                                <h4 class="menu-title"><span class="menu-title">Lingerie</span></h4>
+                                <div class="widget-html">
+                                  <div class="widget-inner">
+                                    <ul>
+                                      <li class="first"> <a href="#">Privacy Policy</a> </li>
+                                      <li> <a href="#"> About Us </a> </li>
+                                      <li> <a href="#"> Terms &amp; Conditions </a> </li>
+                                      <li> <a href="#"> Delivery Information </a> </li>
+                                      <li><a href="#">Newsletter</a></li>
+                                      <li><a href="#">Recurring</a></li>
+                                      <li><a href="i#">Return</a></li>
+                                      <li class="last"><a href="#">Address</a></li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="mega-col col-xs-12 col-sm-12 col-md-3 ">
+                            <div class="mega-col-inner">
+                              <div class="pavo-widget" id="pavowid-2">
+                                <h4 class="menu-title"><span class="menu-title">Last Tweets</span></h4>
+                                <div class="widget-html">
+                                  <div class="widget-inner">
+                                    <ul>
+                                      <li class="title first">MAKES UP PHOTOSHOP</li>
+                                      <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet laboriosam provident at optio</li>
+                                      <li class="title">MAKES UP PHOTOSHOP</li>
+                                      <li class="last">Voluptates, consectetur soluta laborum maiores alias autem velit deserunt quas quis repellendus</li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="mega-col col-xs-12 col-sm-12 col-md-3 hidden-heading-title">
+                            <div class="mega-col-inner">
+                              <div class="pavo-widget" id="pavowid-10">
+                                <h4 class="menu-title"><span class="menu-title">Baner</span></h4>
+                                <div class="widget-html">
+                                  <div class="widget-inner"> <img src="image/data/banner/menu-banner.jpg" alt=""> </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class=""> <a href="#"><span class="menu-title">Computer Parts</span></a></li>
+                  <li class="pav-parrent parent dropdown "> <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="menu-title">Camera</span><b class="caret"></b></a>
+                    <div class="dropdown-menu" style="width:400px">
+                      <div class="dropdown-menu-inner">
+                        <div class="row">
+                          <div class="mega-col col-xs-12 col-sm-12 col-md-12 ">
+                            <div class="mega-col-inner">
+                              <div class="pavo-widget" id="pavowid-1">
+                                <h4 class="menu-title"><span class="menu-title">NUEVO WIDGET</span></h4>
+                                <div class="widget-html_cam">
+                                  <div class="widget-inner">
+                                    <center>
+                                      <embed width="300" height="250" src="http://www.youtube.com/v/xLxaJzJnQTQ" type="application/x-shockwave-flash">
+                                    </center>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class=""> <a href="#"><span class="menu-title">Deals</span></a></li>
+                  <li class="parent dropdown "> <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="menu-title">Digital</span><b class="caret"></b></a>
+                    <div class="dropdown-menu level1">
+                      <div class="dropdown-menu-inner">
+                        <div class="row">
+                          <div class="mega-col col-xs-12 col-sm-12 col-md-12" data-type="menu">
+                            <div class="mega-col-inner">
+                              <ul>
+                                <li class="first"><a "#"><span class="menu-title">Macs</span></a></li>
+                                <li class=" "><a href="#"><span class="menu-title">Printers</span></a></li>
+                                <li class="parent dropdown-submenu "><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="menu-title">Scanners</span><b class="caret"></b></a>
+                                  <div class="dropdown-menu level2">
+                                    <div class="dropdown-menu-inner">
+                                      <div class="row">
+                                        <div class="mega-col col-xs-12 col-sm-12 col-md-12" data-type="menu">
+                                          <div class="mega-col-inner">
+                                            <ul>
+                                              <li class="first"><a "#"><span class="menu-title">Watches</span></a></li>
+                                              <li class="parent dropdown-submenu "><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="menu-title">Aliquam</span><b class="caret"></b></a>
+                                                <div class="dropdown-menu level3">
+                                                  <div class="dropdown-menu-inner">
+                                                    <div class="row">
+                                                      <div class="mega-col col-xs-12 col-sm-12 col-md-12" data-type="menu">
+                                                        <div class="mega-col-inner">
+                                                          <ul>
+                                                            <li class="first"><a href="#"><span class="menu-title"> Furniture</span></a></li>
+                                                            <li class=" "><a href="#"><span class="menu-title">Clothing &amp; Accessories</span></a></li>
+                                                            <li class="last"><a href="#"><span class="menu-title">Baby, Kids &amp; Toys</span></a></li>
+                                                          </ul>
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </li>
+                                              <li class=" "><a href="#"><span class="menu-title">Claritas</span></a></li>
+                                              <li class="last"><a href="#"><span class="menu-title">Litterarum</span></a></li>
+                                            </ul>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li class="parent dropdown-submenu "><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="menu-title">Desktops</span><b class="caret"></b></a>
+                                  <div class="dropdown-menu level2">
+                                    <div class="dropdown-menu-inner">
+                                      <div class="row">
+                                        <div class="mega-col col-xs-12 col-sm-12 col-md-12" data-type="menu">
+                                          <div class="mega-col-inner">
+                                            <ul>
+                                              <li class="first"><a href="#"><span class="menu-title">Consectetuer</span></a></li>
+                                              <li class="last"><a href="#"><span class="menu-title">Hendrerit</span></a></li>
+                                            </ul>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li class=" "><a href="#"><span class="menu-title">Laptops &amp; Notebooks</span></a></li>
+                                <li class="last"><a href="#"><span class="menu-title">Components</span></a></li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class=""> <a href="#"><span class="menu-title">Blogs</span></a></li>
+                  <li class="last"> <a href="#">Contacts us</span></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--side bar-->
+  <div class="col-md-3" style="padding:0px">
+    <table class="table table-bordered">
+      <thead>
+        <tr class="alert-success">
+          <th><span style="font-size: 16px; letter-spacing: 2px; font-weight: 700;">CATEGORIES</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="table_properties"><i class="fa fa-camera"></i> Cameras & Camcoders</td>
+        </tr>
+        <tr>
+          <td class="table_properties"><i class="fa fa-home"></i> Home Entertainment</td>
+        </tr>
+        <tr>
+          <td class="table_properties"><i class="fa fa-laptop"></i> Computers & Laptops</td>
+        </tr>
+        <tr>
+          <td class="table_properties"><i class="fa fa-gamepad"></i> Gaming & Consoles</td>
+        </tr>
+        <tr>
+          <td class="table_properties"><i class="fa fa-tablet"></i> Smartphones & Tablets</td>
+        </tr>
+        <tr>
+          <td class="table_properties"><i class="fa fa-desktop"></i> Televisions</td>
+        </tr>
+        <tr>
+          <td class="table_properties"><i class="fa fa-magic"></i> Games & Toys</td>
+        </tr>
+        <tr>
+          <td class="table_properties"><i class="fa fa-tasks"></i> office</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
   
 </div>
+
+<!-- Bootstrap core JavaScript
+================================================== --> 
+<!-- Placed at the end of the document so the pages load faster --> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
+<script src="js/bootstrap.min.js"></script> 
+<script src="js/content_script.js"></script> 
+<script src="js/docs.min.js"></script> 
+
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug --> 
+<script src="../assets/js/ie10-viewport-bug-workaround.js"></script> 
+<script>
+  window.twttr = (function (d,s,id) {
+    var t, js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return; js=d.createElement(s); js.id=id; js.async=1;
+    js.src="https://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs);
+    return window.twttr || (t = { _e: [], ready: function(f){ t._e.push(f) } });asdasdasd
+  }(document, "script", "twitter-wjs"));
+</script>
 </body>
 </html>
